@@ -1,0 +1,16 @@
+[2023-10-02T22:17:20.073+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reporter.ConfSnsBranch manual__2023-10-02T22:17:08.912946+00:00 [queued]>
+[2023-10-02T22:17:20.078+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reporter.ConfSnsBranch manual__2023-10-02T22:17:08.912946+00:00 [queued]>
+[2023-10-02T22:17:20.078+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-10-02T22:17:20.085+0000] {taskinstance.py:1380} INFO - Executing <Task(BranchPythonOperator): ConfSnsBranch> on 2023-10-02 22:17:08.912946+00:00
+[2023-10-02T22:17:20.088+0000] {standard_task_runner.py:57} INFO - Started process 2702 to run task
+[2023-10-02T22:17:20.091+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Reporter', 'ConfSnsBranch', 'manual__2023-10-02T22:17:08.912946+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpswi_lpt3']
+[2023-10-02T22:17:20.092+0000] {standard_task_runner.py:85} INFO - Job 101: Subtask ConfSnsBranch
+[2023-10-02T22:17:20.122+0000] {task_command.py:415} INFO - Running <TaskInstance: Reporter.ConfSnsBranch manual__2023-10-02T22:17:08.912946+00:00 [running]> on host c27eac239129
+[2023-10-02T22:17:20.164+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Reporter' AIRFLOW_CTX_TASK_ID='ConfSnsBranch' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T22:17:08.912946+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-02T22:17:08.912946+00:00'
+[2023-10-02T22:17:20.171+0000] {python.py:194} INFO - Done. Returned value was: ['END']
+[2023-10-02T22:17:20.172+0000] {python.py:227} INFO - Branch callable return ['END']
+[2023-10-02T22:17:20.172+0000] {skipmixin.py:173} INFO - Following branch ['END']
+[2023-10-02T22:17:20.182+0000] {skipmixin.py:239} INFO - Skipping tasks [('push_sns', -1)]
+[2023-10-02T22:17:20.205+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Reporter, task_id=ConfSnsBranch, execution_date=20231002T221708, start_date=20231002T221720, end_date=20231002T221720
+[2023-10-02T22:17:20.223+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T22:17:20.241+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

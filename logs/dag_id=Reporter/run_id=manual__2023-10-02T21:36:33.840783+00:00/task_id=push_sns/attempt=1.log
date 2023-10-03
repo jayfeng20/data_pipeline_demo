@@ -1,0 +1,18 @@
+[2023-10-02T21:36:45.350+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Reporter.push_sns manual__2023-10-02T21:36:33.840783+00:00 [queued]>
+[2023-10-02T21:36:45.354+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Reporter.push_sns manual__2023-10-02T21:36:33.840783+00:00 [queued]>
+[2023-10-02T21:36:45.355+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2023-10-02T21:36:45.361+0000] {taskinstance.py:1380} INFO - Executing <Task(SnsPublishOperator): push_sns> on 2023-10-02 21:36:33.840783+00:00
+[2023-10-02T21:36:45.364+0000] {standard_task_runner.py:57} INFO - Started process 359 to run task
+[2023-10-02T21:36:45.367+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Reporter', 'push_sns', 'manual__2023-10-02T21:36:33.840783+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpkaq7587l']
+[2023-10-02T21:36:45.368+0000] {standard_task_runner.py:85} INFO - Job 80: Subtask push_sns
+[2023-10-02T21:36:45.395+0000] {task_command.py:415} INFO - Running <TaskInstance: Reporter.push_sns manual__2023-10-02T21:36:33.840783+00:00 [running]> on host c27eac239129
+[2023-10-02T21:36:45.445+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jonathan' AIRFLOW_CTX_DAG_ID='Reporter' AIRFLOW_CTX_TASK_ID='push_sns' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T21:36:33.840783+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-02T21:36:33.840783+00:00'
+[2023-10-02T21:36:45.446+0000] {sns.py:70} INFO - Sending SNS notification to arn:aws:sns:us-east-2:014912904416:ConfSanityCheck using Jon_AWS:
+subject=None
+attributes=None
+message=Authentication mode is not 'passthrough', username and password need to be separately configured in the vdb.
+[2023-10-02T21:36:45.451+0000] {base.py:73} INFO - Using connection ID 'Jon_AWS' for task execution.
+[2023-10-02T21:36:45.452+0000] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='Jon_AWS', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T21:36:46.201+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Reporter, task_id=push_sns, execution_date=20231002T213633, start_date=20231002T213645, end_date=20231002T213646
+[2023-10-02T21:36:46.256+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T21:36:46.266+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
